@@ -1,0 +1,12 @@
+var db;
+const MongoClient = require('mongodb').MongoClient
+
+MongoClient.connect('link-to-mongodb', (err, database) => {
+  if(err) return console.log(err);
+  db = database;
+  app.listen(3010, () => {
+	  console.log(`listening at 3010`);
+  });
+})
+
+//mongodb://testMongo:testMongo@ds157500.mlab.com:57500/star-wars-quote
